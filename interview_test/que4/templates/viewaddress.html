@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Address</title>
+
+</head>
+
+<body >
+  
+        <section>
+            <h1>
+                View Address
+            </h1>
+            <ol>
+                <li><a href="{{url_for('addAddress')}}"></i> Home</a></li>
+            </ol>
+        </section>
+
+        <section >
+                  <table class='table'>
+                        <thead>
+                                <tr >
+                                    <th >street</th>
+                                    <th>state</th>                                        
+                                    <th>country</th>
+                                    <th>pincode</th>
+                                    <th>phoneno</th>
+                                    <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for row in addlist %}
+                                        <tr>
+                                            <td>{{ row.street }}</td>
+                                            <td>{{ row.state }}</td>
+                                            <td>{{ row.country }}</td>
+                                            <td>{{ row.pincode}}</td>
+                                            <td>{{ row.phoneno }}</td>
+                                            <td>
+                                                <a href="/editaddress?addressId={{ row.id }}">
+                                                    edit address
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+</body>
+</html>

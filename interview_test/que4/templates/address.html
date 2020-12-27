@@ -1,0 +1,36 @@
+
+<html>
+<head>
+  
+    <title>address</title>
+</head>
+<body>
+<form action="{{url_for('addAddress')}}" method="POST"> 
+
+<CENTER>
+    <h1><b><u>address</u></b></h1>
+    <table align="center">
+        
+        <tr><td>street</td>
+            <td><input type="text" name="street" required="required"></td></tr>
+
+         <tr><td>state</td>
+            <td><input type="text" name="state" required="required"></td></tr>
+
+         <tr><td>country</td>
+            <td><input type="text" name="country" required="required"></td></tr>
+            
+         <tr><td>pincode</td>
+            <td><input type="text" name="pincode" required="required" maxlength="6"></td></tr>   
+       
+        <tr><td>phoneno</td>
+            <td><input type="text" name="phoneno" required="required" maxlength="10"></td></tr>
+
+        <tr>
+            <td ><input type="submit" value="Add"></td>
+            <td ><a href="/viewAddress">viewAddress</a></td>
+        </tr>
+    </table>
+</form> 
+</body>
+</html>

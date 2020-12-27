@@ -1,0 +1,36 @@
+<html>
+<head>
+  
+    <title>update address</title>
+</head>
+<body>
+<form action="{{url_for('editAddress')}}" method="POST"> 
+
+<CENTER>
+    <h1><b><u>address</u></b></h1>
+    <table align="center">
+        <input type="hidden" name="address_id" value="{{address_id}}">
+
+        <tr><td>street</td>
+            <td><input type="text" name="street" required="required" value="{{row.street}}"></td></tr>
+
+         <tr><td>state</td>
+            <td><input type="text" name="state" required="required" value="{{row.state}}"></td></tr>
+
+         <tr><td>country</td>
+            <td><input type="text" name="country" required="required" value="{{row.country}}"></td></tr>
+            
+         <tr><td>pincode</td>
+            <td><input type="text" name="pincode" required="required" maxlength="6" value="{{row.pincode}}"></td></tr>   
+       
+        <tr><td>phoneno</td>
+            <td><input type="text" name="phoneno" required="required" maxlength="10" value="{{row.phoneno}}"></td></tr>
+
+        <tr>
+            <td ><input type="submit" value="update"></td>
+         
+        </tr>
+    </table>
+</form> 
+</body>
+</html>
